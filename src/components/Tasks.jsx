@@ -2,6 +2,7 @@ import axios from "axios"
 import "./Tasks.scss"
 import TaskItem from "./TaskItem"
 import { useEffect, useState } from "react"
+import AddTask from "./AddTask"
 
 const Tasks = () => {
     const [tasks, setTasks] = useState([])
@@ -22,6 +23,8 @@ const Tasks = () => {
     return(
         <div className="tasks-container">
             <h2>Minhas tarefas</h2>
+
+            <AddTask />
 
             <div className="last-tasks">
                 <h3>Últimas tarefas</h3>
