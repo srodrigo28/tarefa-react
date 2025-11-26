@@ -5,6 +5,7 @@ const CustomInput = ( { label, value, onChange } ) => {
         <div className="custom-input-container">
             <input 
                 type="text" 
+                value={value}
                 className="custom-input"
                 onChange={ (e) => onChange(e) }
             />

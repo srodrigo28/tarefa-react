@@ -12,3 +12,21 @@ http://localhost:8080/tasks
 
 #### rodar aplicação
 npm run dev
+
+#### messagem
+* react-alert
+``` react-16 and 17
+npm install --save react-alert react-alert-template-basic
+```
+
+* sonner
+* link 
+```
+https://www.npmjs.com/package/sonner
+```
+
+```
+npm install sonner
+```
+
+* toash

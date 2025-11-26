@@ -24,7 +24,7 @@ const Tasks = () => {
         <div className="tasks-container">
             <h2>Minhas tarefas</h2>
 
-            <AddTask />
+            <AddTask fetchTasks={fetchTasks} />
 
             <div className="last-tasks">
                 <h3>Últimas tarefas</h3>
