@@ -1,18 +1,23 @@
 {
   "tasks": [
     {
-      "id": "1",
-      "description": "Revisão html5",
-      "isCompleted": false
-    },
-    {
-      "id": "2",
-      "description": "Revisão css3",
-      "isCompleted": false
-    },
-    {
       "id": "3",
       "description": "Revisão Javascript",
+      "isCompleted": true
+    },
+    {
+      "id": "5d36",
+      "description": "Estudar HTML5",
+      "isCompleted": true
+    },
+    {
+      "id": "4fc2",
+      "description": "Estudar CSS3",
+      "isCompleted": true
+    },
+    {
+      "id": "a558",
+      "description": "Estudar React",
       "isCompleted": false
     }
   ]

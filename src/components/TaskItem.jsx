@@ -4,7 +4,7 @@ import { AiFillDelete } from "react-icons/ai"
 
 const TaskItem = ({ task, fetchTasks } ) => {
 
-    const handleTaskDeletion = async (task) => {
+    const handleTaskDeletion = async (  ) => {
         try{
             const confirm = window.confirm("Deseja apagar " + task.description)
             if (!confirm) return
@@ -16,6 +16,16 @@ const TaskItem = ({ task, fetchTasks } ) => {
             console.error(error)
         }
     }
+    const handleTaskCompletetionChange = async (e) => {
+
+            const { data } = await axios.patch(`http://localhost:8080/tasks/${task.id}`, {
+                isCompleted: e.target.checked,
+            });
+            
+            alert('Tarefa atualizada')
+
+            await fetchTasks();
+    }
 
     return (
         <>
@@ -23,7 +33,10 @@ const TaskItem = ({ task, fetchTasks } ) => {
             <div className="task-description">
                 <label className={ task.isCompleted ? 'checkbox-container-completed' : 'checkbox-container'}>
                     <p>{task.description}</p>
-                    <input type="checkbox" id={task.id}
+                    <input 
+                    type="checkbox" 
+                        id={task.id}
+                        onChange={ (e) => handleTaskCompletetionChange(e)}
                         defaultChecked={task.isCompleted }
                     />
                     <span className={task.isCompleted ? 'checkmark completed' : 'checkmark'} > 
