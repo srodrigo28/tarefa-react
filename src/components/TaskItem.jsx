@@ -1,7 +1,22 @@
+import axios from "axios";
 import "./TaskItem.scss"
 import { AiFillDelete } from "react-icons/ai"
 
-const TaskItem = ({ task } ) => {
+const TaskItem = ({ task, fetchTasks } ) => {
+
+    const handleTaskDeletion = async (task) => {
+        try{
+            const confirm = window.confirm("Deseja apagar " + task.description)
+            if (!confirm) return
+            const { data } = await axios.delete(`http://localhost:8080/tasks/${task.id}`);
+            alert('Deletado com sucesso')
+
+            await fetchTasks();
+        }catch(error){
+            console.error(error)
+        }
+    }
+
     return (
         <>
         <div className="task-item-container">
@@ -16,7 +31,7 @@ const TaskItem = ({ task } ) => {
                     </span>
                 </label>    
             </div>
-            <div className="delete">
+            <div className="delete" onClick={ () => handleTaskDeletion(task)}>
                 <AiFillDelete size={18} color="red" />
             </div>
         </div>
