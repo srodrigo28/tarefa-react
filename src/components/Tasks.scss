@@ -6,14 +6,9 @@
     padding-top: 60px;
     height: 100vh;
 
-    h2 {
-        margin-bottom: 24px;
-    }
+    h2 { margin-bottom: 24px; }
 
-    h3 {
-        margin-top: 20px;
-        font-size: 18px;
-    }
+    h3 { margin-top: 20px;  font-size: 18px; }
 
     .last-tasks {
         flex: 1;
@@ -22,14 +17,10 @@
         flex-direction: column;
     }
 
-
-    .tasks-list {
-        margin-top: 14px;
-    }
-
+    .tasks-list { margin-top: 14px; } 
+ 
     .completed-tasks {
         flex: 1;
         padding-top: 28px;
     }
-
 }

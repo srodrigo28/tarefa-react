@@ -26,12 +26,10 @@ $main-color: #00ffa3;
             outline: none;
             border-bottom: 1px solid $main-color;
         }
-
         &:focus ~ .custom-input-label {
             @include shrinkLabel();
         }
     }
-
     .custom-input-label {
         color: $sub-color;
         font-size: 16px;
