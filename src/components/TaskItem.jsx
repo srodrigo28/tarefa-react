@@ -12,6 +12,7 @@ const TaskItem = ({ task, fetchTasks } ) => {
             alert('Deletado com sucesso')
 
             await fetchTasks();
+            return
         }catch(error){
             console.error(error)
         }
